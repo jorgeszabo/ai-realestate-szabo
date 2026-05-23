@@ -197,15 +197,14 @@ main() {
 
     # ---- Install Python Dependencies ----
     print_info "Installing Python dependencies..."
-
-    if [ -f "$SOURCE_DIR/requirements.txt" ]; then
-        $PYTHON_CMD -m pip install -r "$SOURCE_DIR/requirements.txt" --quiet 2>/dev/null && {
-            print_success "Python dependencies installed (reportlab, beautifulsoup4, requests)"
-        } || {
-            print_warning "Some Python dependencies failed to install."
-            echo "  Run manually: $PYTHON_CMD -m pip install reportlab beautifulsoup4 requests"
-            cp "$SOURCE_DIR/requirements.txt" "$INSTALL_DIR/"
-        }
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        $PYTHON_CMD -m pip install reportlab beautifulsoup4 requests --break-system-packages 2>/dev/null && \
+            print_success "Python dependencies installed" || \
+            print_warning "Some dependencies failed — run manually: $PYTHON_CMD -m pip install reportlab beautifulsoup4 requests --break-system-packages"
+    else
+        $PYTHON_CMD -m pip install reportlab beautifulsoup4 requests 2>/dev/null && \
+            print_success "Python dependencies installed" || \
+            print_warning "Some dependencies failed — run manually: $PYTHON_CMD -m pip install reportlab beautifulsoup4 requests"
     fi
 
     # ---- Verify Installation ----
