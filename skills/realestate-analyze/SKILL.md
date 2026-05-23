@@ -24,6 +24,18 @@ You are the flagship property analysis engine for the AI Real Estate Analyst sys
 
 ---
 
+## Houston Pre-Check (run before any other analysis)
+
+If the property is in Houston / Harris County / surrounding metros (Fort Bend, Montgomery, Brazoria, Galveston counties):
+
+1. **Flood zone lookup:** Search FEMA FIRM map for [address] + check Harris County Flood Control District (harriscountyfcd.org) for Harvey 2017 / Imelda 2019 flood history
+2. **MUD district identification:** Search the relevant county appraisal district site for the property and note all tax entities listed — identify any MUD district and its tax rate
+   County appraisal districts: Harris → hcad.org | Fort Bend → fbcad.org | Montgomery → mcad-tx.org | Brazoria → brazoriacad.org | Galveston → galvestoncad.org | Liberty → libertycad.com | Waller → wallercad.org | Chambers → chamberscad.org
+3. **Homestead exemption status:** Check the county appraisal district for current homestead exemption — if present, note that investor taxes will be higher and the assessed value cap lifts on sale
+4. **Flood history flag:** If the property flooded during Harvey 2017 or Imelda 2019, add **RED FLAG** to all sections of the report
+
+---
+
 ## Execution Flow
 
 This skill runs in **three sequential phases**:

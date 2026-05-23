@@ -119,7 +119,14 @@ Calculate all operating expenses. Use three scenarios for key variable expenses:
 | HOA Fees | $[X] | $[X] | Listing data |
 | Insurance | $[X] | $[X] | Estimate: 0.35-0.50% of property value annually |
 
-**Insurance Estimation Guide:**
+> **Texas Homestead Warning:** If the subject property currently carries a homestead exemption,
+> the investor tax bill will be materially higher than current tax records show. Texas caps assessed
+> value increases at 10%/year for homestead properties — this cap **lifts on sale**. A property
+> homesteaded for several years may face a sharp assessed value reset to full market value in year
+> one of investor ownership, significantly increasing annual taxes. Request an actual non-homestead
+> tax estimate from HCAD (hcad.org) before finalizing the cash flow model.
+
+**Insurance Estimation Guide (National Baseline — 0.35–0.50% of property value annually):**
 
 | Property Value | Estimated Annual Insurance | Monthly |
 |----------------|---------------------------|---------|
@@ -129,7 +136,22 @@ Calculate all operating expenses. Use three scenarios for key variable expenses:
 | $500,000 | $1,750-$2,500 | $146-$208 |
 | $750,000 | $2,625-$3,750 | $219-$313 |
 
-Adjust upward for: flood zones (+50-100%), hurricane zones (+30-60%), older properties (+10-25%), high-value areas.
+Adjust upward for: older properties (+10-25%), high-value areas.
+
+> **Houston/Harris County — Standard Required Costs (NOT conditional adjustments):**
+> These are baseline required expenses for ALL Houston properties, not optional upward adjustments:
+>
+> | Coverage | Annual Cost | Notes |
+> |----------|-------------|-------|
+> | Homeowners Insurance | 0.75–1.25% of property value/year | Higher base reflects wind/hail/heat exposure |
+> | Flood Insurance (NFIP or private) | $800–$3,000/year | Required for all Houston properties; NFIP rate depends on elevation certificate |
+> | Wind/Hail Coverage | $500–$1,500/year | Often excluded from standard HO policy in Harris County; may require separate endorsement or TWIA policy |
+>
+> **Houston example — $400,000 property:**
+> - Homeowners: ~$3,000–$5,000/year
+> - Flood: ~$1,000–$2,500/year
+> - Wind/Hail: ~$700–$1,200/year
+> - **Total: ~$4,700–$8,700/year** (vs. $1,400–$2,000 national baseline)
 
 #### Variable Expenses (Three Scenarios)
 
@@ -505,7 +527,28 @@ Save the report to `PROPERTY-RENTAL-[ADDRESS].md`.
 ## Error Handling
 
 - If no rental comps found within 1 mile, expand to 2 miles and note reduced confidence
-- If property taxes are unavailable, estimate at 1.0-1.5% of property value (varies by state)
+- If property taxes are unavailable, estimate at 1.0-1.5% of property value (varies by state).
+  **Houston Metro exception: use the county-specific rates below as your baseline.**
+  Always add MUD district tax as a separate line — look up at the relevant county appraisal
+  district. MUD rates typically add $0.50-$1.50 per $100 valuation on top of all other taxes.
+
+  **Houston Metro Area Effective Property Tax Rate Reference (all entities combined):**
+
+  | County | Typical Effective Rate | Key Cities / Areas | Appraisal District |
+  |--------|----------------------|--------------------|--------------------|
+  | Harris | 2.0–2.8% | Houston, Humble, Pasadena, Katy (part) | hcad.org |
+  | Fort Bend | 2.0–2.6% | Sugar Land, Missouri City, Richmond, Katy (part) | fbcad.org |
+  | Montgomery | 1.8–2.5% | The Woodlands, Conroe, Spring, Magnolia | mcad-tx.org |
+  | Brazoria | 2.0–2.5% | Pearland, Alvin, Lake Jackson, Friendswood (part) | brazoriacad.org |
+  | Galveston | 2.0–2.5% | League City, Friendswood (part), Texas City | galvestoncad.org |
+  | Liberty | 1.6–2.2% | Dayton, Liberty, Baytown (part) | libertycad.com |
+  | Waller | 1.8–2.4% | Katy (part), Brookshire, Hempstead | wallercad.org |
+  | Chambers | 1.8–2.3% | Baytown (part), Anahuac | chamberscad.org |
+
+  *Always verify with the specific county appraisal district. Rates shown are combined estimates
+  including county, city, school district, and typical MUD. Actual rate varies by the exact tax
+  entities at the property address. Katy properties may span Harris, Fort Bend, and Waller counties
+  — confirm county at hcad.org or the relevant CAD.*
 - If current mortgage rates unavailable from search, use 7.0% as a conservative default
 - If HOA amount is unknown for a condo/townhouse, flag it as a critical missing data point
 - Always note when estimates are used in place of actual data
