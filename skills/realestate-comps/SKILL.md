@@ -96,6 +96,11 @@ Apply these filters to identify the best comparables, in order of priority:
 | **Lot Size** | Within 20% | Within 40% |
 | **Condition** | Similar condition | Note difference |
 
+> **Houston Metro exception:** Subdivision name is the primary comp filter, not radius. Search
+> comps within the same subdivision first. Only expand to adjacent subdivisions if fewer than 3
+> closed sales exist within the subdivision in the past 6 months. Two homes 0.3 miles apart in
+> different subdivisions, school districts, or MUD districts are not valid comps for each other.
+
 **Target: 5-10 comps.** If fewer than 5 comps meet the Ideal criteria, expand to Acceptable. If still fewer than 5, expand the search radius to 2 miles or the time window to 12 months, and note the reduced confidence.
 
 ---

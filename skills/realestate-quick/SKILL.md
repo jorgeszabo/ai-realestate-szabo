@@ -88,9 +88,19 @@ Without launching subagents, rapidly assess 5 dimensions:
 |-----------|------------|--------|
 | Value | Price vs area median and comps. Overpriced, fair, or underpriced? | Over/Fair/Under |
 | Rental Yield | Estimated rent vs price. Gross yield above or below 6%? | Strong/Moderate/Weak |
-| Neighborhood | School ratings, Walk Score, safety. Above or below area average? | A/B/C/D |
+| Neighborhood | School district quality, employment proximity, highway access, flood history. See Houston note below. | A/B/C/D |
 | Market Temp | Days on market, price changes, inventory. Hot, warm, or cool? | Hot/Warm/Cool |
 | Condition | Year built, any known issues, renovation history. Move-in or work needed? | Excellent/Good/Fair/Poor |
+
+> **Houston Metro — Neighborhood Quality Scoring:** Do not use Walk Score as a neighborhood
+> quality proxy. Houston is car-dependent by design — Walk Scores of 20-45 are normal for
+> excellent neighborhoods. Instead rate neighborhood quality on:
+> 1. School district quality and specific campus ratings from TexasSchoolGuide.com
+> 2. Proximity to major employment corridors — Energy Corridor, Galleria, Medical Center, Downtown
+> 3. Highway access — proximity to Beltway 8, Grand Pkwy, I-10, I-45, I-69
+> 4. Master-planned community status — The Woodlands, Sugar Land, Katy, Pearland, Friendswood,
+>    Sienna, Bridgeland, Harmony
+> 5. Flood history and drainage infrastructure quality
 
 ### STEP 3: ASSIGN SIGNAL
 

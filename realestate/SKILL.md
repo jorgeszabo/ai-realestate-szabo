@@ -74,6 +74,12 @@ Use these tools to gather property data:
 - **WebFetch** — Zillow, Redfin, Realtor.com, county assessor records, census data, walk score
 - **Bash** — Run Python scripts for mortgage calculations, cash flow analysis, PDF generation
 
+> **Houston Primary Source:** HAR.com (Houston Association of Realtors) is the authoritative MLS
+> for the Houston metro. For any Houston property, search HAR.com for active listings, recent sold
+> prices, and days on market before using Zillow or Redfin estimates. HAR data reflects actual MLS
+> transactions — national aggregators frequently lag or misrepresent Houston market data by 30-90
+> days and 5-15% on valuation.
+
 ---
 
 ## Houston Pre-Check (run before any other analysis)
