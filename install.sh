@@ -157,7 +157,7 @@ main() {
     cp -r "$SOURCE_DIR/realestate/"* "$INSTALL_DIR/"
     print_success "Main skill installed → ${INSTALL_DIR}/"
 
-    # ---- Install Sub-Skills (14 skills) ----
+    # ---- Install Sub-Skills (15 skills) ----
     print_info "Installing sub-skills..."
 
     SKILL_COUNT=0
